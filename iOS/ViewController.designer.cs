@@ -18,10 +18,19 @@ namespace NativeRssFeed.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField UrlText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton ValidateButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (UrlText != null) {
+                UrlText.Dispose ();
+                UrlText = null;
+            }
+
             if (ValidateButton != null) {
                 ValidateButton.Dispose ();
                 ValidateButton = null;

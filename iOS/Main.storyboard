@@ -26,6 +26,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1530" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="152" y="200" width="111" height="30"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <segue id="2030" destination="1962" kind="show"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,6 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="ValidateButton" destination="1530" id="name-outlet-1530"/>
+                        <outlet property="UrlText" destination="1312" id="name-outlet-1312"/>
                     </connections>
                     <navigationItem id="892" key="navigationItem" title="Agixis Feeder"/>
                 </viewController>
@@ -61,6 +65,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="822" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-518" y="3"/>
+        </scene>
+        <scene sceneID="1961">
+            <objects>
+                <viewController id="1962" sceneMemberID="viewController" customClass="RssViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1959"/>
+                        <viewControllerLayoutGuide type="bottom" id="1960"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1963">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1964" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="1"/>
         </scene>
     </scenes>
 </document>
