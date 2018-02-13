@@ -1,4 +1,4 @@
-﻿using System;
+﻿sing System;
 namespace NativeRssFeed
 {
     public class MyClass
