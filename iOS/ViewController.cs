@@ -21,5 +21,15 @@ namespace NativeRssFeed.iOS
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.		
         }
+
+        public override void PrepareForSegue(UIStoryboardSegue segue, Foundation.NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+            if(segue.Identifier.Equals("UrlShow" )){
+                RssViewController viewController = (RssViewController)segue.DestinationViewController;
+                viewController.Url = this.UrlText.Text;
+            }
+
+        }
     }
 }

@@ -14,5 +14,16 @@ namespace NativeRssFeed.iOS
     [Register ("RssViewController")]
     partial class RssViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextView UrlTextDisplay { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (UrlTextDisplay != null) {
+                UrlTextDisplay.Dispose ();
+                UrlTextDisplay = null;
+            }
+        }
     }
 }
