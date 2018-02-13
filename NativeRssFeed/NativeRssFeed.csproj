@@ -35,6 +35,7 @@
     <Compile Include="Models\RssItem.cs" />
     <Compile Include="Services\RssService.cs" />
     <Compile Include="Interfaces\IRssService.cs" />
+    <Compile Include="Models\RssRoot.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

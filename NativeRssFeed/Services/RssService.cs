@@ -13,12 +13,22 @@ namespace NativeRssFeed.Services
         }
         public Channel GetChannelFromUrl(string url)
         {
-            var channel = new Channel();
-            var serializer = new XmlSerializer(typeof(Channel));
+            var serializer = new XmlSerializer(typeof(RssRoot));
             using( XmlReader reader = XmlReader.Create(url)){
-                channel = (Channel)serializer.Deserialize(reader);
-                return channel;
+                try{
+                    var root = (RssRoot)serializer.Deserialize(reader);
+                    if (root != null && root.Channel != null)
+                    {
+                        return root.Channel;
+                    }   
+                }
+                catch(Exception error){
+                    return null;
+                }
+
+                return null;
             }
+
         }
     }
 }
