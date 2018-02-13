@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -106,6 +107,10 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="View\DisplayRssChannel.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>DisplayRssChannel.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -117,6 +122,9 @@
     <Compile Include="RssViewController.cs" />
     <Compile Include="RssViewController.designer.cs">
       <DependentUpon>RssViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DisplayRssChannel.cs">
+      <DependentUpon>DisplayRssChannel.cshtml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
