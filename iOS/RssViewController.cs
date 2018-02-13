@@ -9,12 +9,12 @@ namespace NativeRssFeed.iOS
     public partial class RssViewController : UIViewController
     {
         public string Url { get; set; }
-        public Channel Channel { get; set; }
+        public rssChannel Channel { get; set; }
         public RssService RssService { get; set; }
 
         public RssViewController (IntPtr handle) : base (handle)
         {
-            this.Channel = new Channel();
+            this.Channel = new rssChannel();
             this.RssService = new RssService();
         }
 

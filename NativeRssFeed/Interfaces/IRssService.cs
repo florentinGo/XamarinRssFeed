@@ -5,6 +5,6 @@ namespace NativeRssFeed.Interfaces
 {
     public interface IRssService
     {
-        Channel GetChannelFromUrl(string url);
+        rssChannel GetChannelFromUrl(string url);
     }
 }

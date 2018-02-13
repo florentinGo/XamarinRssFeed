@@ -11,18 +11,21 @@ namespace NativeRssFeed.Services
         public RssService()
         {
         }
-        public Channel GetChannelFromUrl(string url)
+        public rssChannel GetChannelFromUrl(string url)
         {
-            var serializer = new XmlSerializer(typeof(RssRoot));
-            using( XmlReader reader = XmlReader.Create(url)){
-                try{
-                    var root = (RssRoot)serializer.Deserialize(reader);
-                    if (root != null && root.Channel != null)
+            var serializer = new XmlSerializer(typeof(rss));
+            using (var reader = XmlReader.Create(url))
+            {
+                try
+                {
+                    var root = (rss)serializer.Deserialize(reader);
+                    if (root != null && root.channel != null)
                     {
-                        return root.Channel;
-                    }   
+                        return root.channel;
+                    }
                 }
-                catch(Exception error){
+                catch (Exception)
+                {
                     return null;
                 }
 
