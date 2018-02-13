@@ -33,10 +33,13 @@
     <Compile Include="Models\Feed.cs" />
     <Compile Include="Models\Enclosure.cs" />
     <Compile Include="Models\RssItem.cs" />
+    <Compile Include="Services\RssService.cs" />
+    <Compile Include="Interfaces\IRssService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Services\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
