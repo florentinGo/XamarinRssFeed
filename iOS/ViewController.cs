@@ -25,8 +25,8 @@ namespace NativeRssFeed.iOS
         public override void PrepareForSegue(UIStoryboardSegue segue, Foundation.NSObject sender)
         {
             base.PrepareForSegue(segue, sender);
-            if(segue.Identifier.Equals("UrlShow" )){
-                RssViewController viewController = (RssViewController)segue.DestinationViewController;
+            if(segue.Identifier.Equals("BuildRss" )){
+                RssItemsViewController viewController = (RssItemsViewController)segue.DestinationViewController;
                 viewController.Url = this.UrlText.Text;
             }
 

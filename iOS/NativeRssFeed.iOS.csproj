@@ -99,6 +99,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="DataSources\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -115,11 +116,16 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="RssViewController.cs" />
-    <Compile Include="RssViewController.designer.cs">
-      <DependentUpon>RssViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataSources\TableRssSource.cs" />
+    <Compile Include="RssItemsViewController.cs" />
+    <Compile Include="RssItemsViewController.designer.cs">
+      <DependentUpon>RssItemsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetailViewController.cs" />
+    <Compile Include="ItemDetailViewController.designer.cs">
+      <DependentUpon>ItemDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RssItemCell.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

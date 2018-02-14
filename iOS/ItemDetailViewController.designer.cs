@@ -11,19 +11,11 @@ using UIKit;
 
 namespace NativeRssFeed.iOS
 {
-    [Register ("RssViewController")]
-    partial class RssViewController
+    [Register ("ItemDetailViewController")]
+    partial class ItemDetailViewController
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView ChannelTable { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (ChannelTable != null) {
-                ChannelTable.Dispose ();
-                ChannelTable = null;
-            }
         }
     }
 }

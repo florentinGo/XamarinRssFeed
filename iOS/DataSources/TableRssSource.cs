@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Foundation;
+using NativeRssFeed.iOS.View;
 using NativeRssFeed.Models;
 using UIKit;
 
@@ -28,8 +29,14 @@ namespace NativeRssFeed.iOS.DataSources
             }
             var item = items[indexPath.Row];
             cell.TextLabel.Text = item.title;
-
             return cell;
+        }
+
+        public rssChannelItem GetItem(int index){
+            if(index < this.items.Length){
+                return this.items[index];
+            }
+            return null;
         }
 
         public override nint RowsInSection(UITableView tableview, nint section)
